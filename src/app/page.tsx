@@ -1,103 +1,102 @@
-import Image from "next/image";
+import Footer from "@/sections/Footer";
+import Header from "@/sections/Header";
+import Timeline from "@/components/Timeline";
+import Head from "next/head";
+import Link from "next/link";
+import Experience from "@/sections/Experience";
 
-export default function Home() {
+
+function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="bg-base-100 text-base-content">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section id="hero" className="min-h-screen flex flex-col items-center justify-center text-center p-10">
+        <h1 className="text-5xl font-bold">Bilal Aloui</h1>
+        <p className="mt-4 text-xl">Cybersecurity Student & Ethical Hacking Enthusiast</p>
+        <div className="mt-6 flex gap-4">
+          <a href="#contact" className="btn btn-primary">Hire Me</a>
+          <a href="/blog" className="btn btn-outline">Read My Blog</a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 px-6 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+        <p className="text-lg leading-relaxed">
+          I'm a cybersecurity student with a strong interest in digital trust, ethical hacking, and cyber defense. I enjoy building secure systems and learning through CTFs, bug bounties, and hands-on labs.
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-16 bg-base-200 px-6">
+        <h2 className="text-3xl font-semibold mb-4 text-center">Technical Skills</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          <span className="badge badge-primary">Linux</span>
+          <span className="badge badge-secondary">Wireshark</span>
+          <span className="badge badge-accent">Nmap</span>
+          <span className="badge badge-neutral">Python</span>
+          <span className="badge badge-warning">Burp Suite</span>
+          <span className="badge badge-info">Metasploit</span>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-semibold mb-8">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Project Card Example */}
+          <div className="card bg-base-100 shadow-md">
+            <div className="card-body">
+              <h3 className="card-title">ML-Based Intrusion Detection System</h3>
+              <p>Used CICIDS2017 and Car-Hacking datasets to detect internal and external cyber attacks in vehicles using machine learning.</p>
+              <div className="card-actions justify-end">
+                <a href="https://github.com/your-project" className="btn btn-sm btn-outline">View Code</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Add more project cards */}
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-16 bg-base-200 px-6">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Certifications</h2>
+        <ul className="timeline">
+          <li>
+            <h3 className="font-bold">TryHackMe: Offensive Pentesting</h3>
+            <p className="text-sm text-gray-500">Completed 2024</p>
+          </li>
+          <li>
+            <h3 className="font-bold">HackTheBox: Starting Point</h3>
+            <p className="text-sm text-gray-500">Completed 2023</p>
+          </li>
+        </ul>
+      </section>
+
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Education Section */}
+      <section id="education" className="py-16 bg-base-200 px-6">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Education</h2>
+        <div className="text-center">
+          <h3 className="text-xl font-bold">École Normale Supérieure de l’Enseignement Technique – Mohammedia</h3>
+          <p className="text-sm text-gray-500">Computer Engineering – Cybersecurity Track (2023–2026)</p>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-6 max-w-md mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
+        <p className="mb-4">I'm open to internships, collaborations, or cybersecurity research.</p>
+        <a href="mailto:your.email@example.com" className="btn btn-primary">Email Me</a>
+      </section>
+
+    </main>
+
   );
 }
+
+export default Home;
