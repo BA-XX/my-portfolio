@@ -1,8 +1,3 @@
-import Footer from "@/sections/Footer";
-import Header from "@/sections/Header";
-import Timeline from "@/components/Timeline";
-import Head from "next/head";
-import Link from "next/link";
 import Experience from "@/sections/Experience";
 
 
@@ -24,7 +19,7 @@ function Home() {
       <section id="about" className="py-16 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-lg leading-relaxed">
-          I'm a cybersecurity student with a strong interest in digital trust, ethical hacking, and cyber defense. I enjoy building secure systems and learning through CTFs, bug bounties, and hands-on labs.
+          I&#39;m a cybersecurity student with a strong interest in digital trust, ethical hacking, and cyber defense. I enjoy building secure systems and learning through CTFs, bug bounties, and hands-on labs.
         </p>
       </section>
 
@@ -90,7 +85,7 @@ function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 max-w-md mx-auto text-center">
         <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
-        <p className="mb-4">I'm open to internships, collaborations, or cybersecurity research.</p>
+        <p className="mb-4">I&#39;m open to internships, collaborations, or cybersecurity research.</p>
         <a href="mailto:your.email@example.com" className="btn btn-primary">Email Me</a>
       </section>
 
